@@ -7,7 +7,7 @@
         padding-top: 118px;
         padding-bottom: 118px;
     }
-    
+
     @media (max-width: 767px) {
         max-width: 480px;
         margin-right: auto;
@@ -16,7 +16,7 @@
         background-image: linear-gradient(to right, 
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4))
-        , url('../../images/mobile/hero-480@1x.jpg');
+        , url('./../images/mobile/hero-480@1x.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; 
@@ -27,7 +27,7 @@
                     background-image: linear-gradient(to right, 
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4))
-                    , url('../../images/mobile/hero-480@2x.jpg');
+                    , url('./../images/mobile/hero-480@2x.jpg');
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover; 
@@ -43,7 +43,7 @@
         background-image: linear-gradient(to right, 
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4))
-        , url('../../images/tablet/hero-768@1x.jpg');
+        , url('./../images/tablet/hero-768@1x.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; 
@@ -54,7 +54,7 @@
                     background-image: linear-gradient(to right, 
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4))
-                    , url('../../images/tablet/hero-768@2x.jpg');
+                    , url('./../images/tablet/hero-768@2x.jpg');
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover; 
@@ -74,7 +74,7 @@
         background-image: linear-gradient(to right, 
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4))
-        , url('../../images/desktop/hero-1200@1x.jpg');
+        , url('./../images/desktop/hero-1200@1x.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; 
@@ -85,7 +85,7 @@
                     background-image: linear-gradient(to right, 
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4))
-                    , url('../../images/desktop/hero-1200@2x.jpg');
+                    , url('./../images/desktop/hero-1200@2x.jpg');
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover; 
