@@ -1,0 +1,29 @@
+h1, h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul, ol {
+    list-style-type: none;
+
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;  
+}
+svg {
+    display: block;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+picture {
+    display: block;
+}
+a {
+    
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+}

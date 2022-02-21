@@ -1,0 +1,246 @@
+.backdrop {
+    
+        position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: $background-primary;
+  
+    padding: 40px;
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        max-width: 450px;
+        height: 609px;
+        
+    }
+    @media (min-width: 768px) {
+        width: 450px;
+        height: 609px;
+    }
+    @media (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+    }
+    
+}
+
+.modal__header {
+    display: block;
+    color: $secondary-text-color;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 480px) {
+        line-height: calc(30 / 20);
+    }
+}
+
+.close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: $background-primary;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+        outline: none;
+        }
+    &:hover .close-button__icon,
+    &:focus .close-button__icon {
+        fill: $accent-color;
+    }
+}
+
+
+.backdrop--hidden {
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0);
+
+    
+}
+
+.close-button__icon {
+    fill: #000000;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.form__label {
+    display: flex;
+    position: relative;
+    align-items: center; 
+
+    &:not(:last-of-type) {
+        margin-top: 28px;
+    }
+    
+    &:last-of-type {
+        margin-top: 20px;
+    } 
+}
+
+
+.form__field {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    flex-grow: 1;
+    height: 40px;
+
+    padding: 12px 42px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+            &:hover,
+            &:focus {
+                border-color: $accent-color;
+                outline: none;
+            }
+            &:hover+.form__icon,
+            &:focus+.form__icon {
+                 fill: $accent-color;
+             }
+}
+
+.form__field--comment {
+    height: 120px;
+
+    padding: 12px 16px;
+    resize: none;
+
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        letter-spacing: 0.01em;
+    }
+}
+
+.form__line {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -18px;
+
+    color: $main-text-color;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+}
+
+.form__icon {
+    display: inline-block;
+    position: absolute;
+    left: 12px;
+    align-self: center;
+
+    width: 18px;
+    height: 18px;
+
+    fill: black;
+   
+}
+
+.form__conform-text {
+   
+    @media screen and (max-width: 1199px) {
+        font-size: 12px;
+        line-height: calc(14 / 12);
+    }
+  
+    @media (min-width: 1200px) {
+        font-size: 14px;
+        line-height: calc(24 / 14);
+    }
+}
+
+.form__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 15px;
+
+    margin-right: 8px;
+
+    border: 2px solid black;
+    border-radius: 2px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.form__link {
+    color: $accent-color;
+}
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-width: 200px;
+    height: 50px;
+    
+    margin: 30px auto 0 auto;
+   
+    transition: box-shadow 250ms ubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+    }
+}
+
+    
+
+.form__field--hidden{
+    order: 1;
+    opacity: 0;
+
+    &:checked~.form__checkbox {
+        background-color: $accent-color;
+        border-color: $accent-color;
+    }
+    
+    &:focus~.form__checkbox {
+        border-color: $accent-color;
+    }
+}
